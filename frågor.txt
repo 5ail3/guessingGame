@@ -25,8 +25,10 @@
 Jag tänker i framtiden när jag arbetar i grupp nästan enbart använda 'git revert' (ifall jag inte är jättesäker på att
 jag vill tabort någonting / eller att det blir tydligare om jag tarbort någonting)
 'git revert' behåller nämligen commithistoriken intakt och skickar fram en ny ändring längst fram i commithistoriken
-(istället för att tabort den) detta gör att det blir tydligt för amndra att följa exakt vad som har hänt ->
+(istället för att tabort den) detta gör att det blir tydligt för andra att följa exakt vad som har hänt ->
 dessutom minskar risken att man tarbort något som abolut inte ska tas bort.
 
-Samtidigt har jag märkt att det blir en mycket tydligare och finar commithistorik ifall man tar bort småslarvfel ->
-t.ex: jag commitar en fil och kommer på att jag gjorde ett litet fel. Då kör jag 'get reset HEAD~1' det tar mig 
+Samtidigt har jag märkt att det blir en mycket tydligare och finare commithistorik ifall man tar bort småslarvfel ->
+t.ex: jag commitar en fil och kommer på att jag gjorde ett litet fel. Då kör jag 'get reset HEAD~1' det tar mig tillbaka
+hela vägen till working directory -> där kan jag göra de förändringar jag vill eller också helt enkelt med hjälp av
+'git checkout <filename>' tabort förändringarna. 
