@@ -1,0 +1,32 @@
+- När använder man add respektive commit?
+  Man använder sig av git add när man vill lägga till en förändring till index eller staging area (innan den ska commitas)
+
+- Vad är pull repektive push? 
+  'git pull' är ett kommando som hämtar (fetchar) från remote repository och mergar samtidigt med din lokal repository
+  'git push' skickar upp förändringar från din lokala repository till remote repository och därmed uppdaterar den gemensama repositoryt
+
+- När använder man log respektive status?
+  'git log' används för att få en överblick på commithistoriken i ditt repo, 'git status' kollar statusen på de
+   förändringar du gjort i ditt lokala repo (ifall de är i working directory, index eller ifall allt är commitat).
+
+- Vad är en Git branch och varför är de viktiga?
+  En git branch är ett sätt att klyva commithistoriken i ditt repo för att kunna testa olika förändringar utefter samma
+  commithistorik -> detta gör det lätt att prova många olika scenarior utan att tappa bort ursprunget.
+
+
+
+
+- Det finns flera sätt att rulla tillbaka koden till ett tidigare tillstånd.
+  Förklara skillnaden och motivera när man skulle använda den ena eller andra metoden.
+  Ge exempel på de kommandon du använder för att göra detta och vissa att det fungerar,
+  vilken output du fick från git-kommandona.
+  Tips: Gör exemplen med att backa i en branch så att master fortfarande är korrekt. 
+
+Jag tänker i framtiden när jag arbetar i grupp nästan enbart använda 'git revert' (ifall jag inte är jättesäker på att
+jag vill tabort någonting / eller att det blir tydligare om jag tarbort någonting)
+'git revert' behåller nämligen commithistoriken intakt och skickar fram en ny ändring längst fram i commithistoriken
+(istället för att tabort den) detta gör att det blir tydligt för amndra att följa exakt vad som har hänt ->
+dessutom minskar risken att man tarbort något som abolut inte ska tas bort.
+
+Samtidigt har jag märkt att det blir en mycket tydligare och finar commithistorik ifall man tar bort småslarvfel ->
+t.ex: jag commitar en fil och kommer på att jag gjorde ett litet fel. Då kör jag 'get reset HEAD~1' det tar mig 
